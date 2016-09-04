@@ -1,0 +1,49 @@
+.TH calculate 7
+.SH NAME
+calculate \- Perform standard calculations on floating point numbers
+.SH SYNOPSIS
+.B calculate <expression>    This provides 2 significant digits
+.br
+.B calculate -s <expression> This provides no significant digits
+.br
+.B calculate -f <field containing floats> <delimiter> <filename(s)>
+.br
+.B ans [expression] Calculates using previous answer
+.SH OPTIONS
+.TP 5
+[\fB-f\fR]
+.I field delim filename
+Show statistics on all the numbers in the file(s)
+.I filename
+in the field
+.I field
+separated by the delimiter
+.I delim
+.TP
+[\fB-h\fR] help screen and version information
+.TP
+[\fB-s\fR] Don't show significant digits
+.SH DESCRIPTION
+The \fBcalculate\fR and \fBans\fR commands will perform standard mathematical calculations.
+.br
+The answer is stored in a file called calc33.tmp under /var/run/calculate.  This answer can be displayed at any time using the ans command.  The ans command can also use that answer in further calculations.
+.br
+Place all negative numbers in parentheses.
+.br
+Always put function arguments in parentheses.
+.br
+`pi` and `e` are valid input values.
+.br
+.br
+Valid operations include +, -, *, /, % (percent), # (mod), and ^ (power).
+.br
+Valid functions include cos, cosh, sin, sinh, tan, tanh, ln, log, exp, and sqrt.
+.br
+.br
+Example of a valid mathematical expression:
+.br
+     (5log(4)*5cos(pi))^2
+.br
+\fBNOTE:\fR THIS IS BETA CODE.  USE AT YOUR OWN RISK.
+.SH AUTHOR
+A. G. Madi (agmadi@ensadi.com)
