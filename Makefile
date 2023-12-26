@@ -16,6 +16,9 @@ MANDIR = /usr/share/man/man7
 # Options for release
 CFLAGS = -O2 -ansi
 
+debug: calculate.cpp eval.cpp
+	$(CC) -g -o calculate calculate.cpp eval.cpp
+
 calculate: calculate.o eval.o
 	$(CC) -o calculate calculate.o eval.o
 

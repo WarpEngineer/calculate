@@ -28,3 +28,10 @@
 *.out
 *.app
 calculate.code-workspace
+calculate
+
+# man page
+calculate.7.gz
+
+# vscode
+.vscode
